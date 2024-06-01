@@ -92,7 +92,7 @@ app.post("/signOut", (req, res) => {
   res.redirect("/login");
 });
 app.get("/register", (req, res) => {
-  res.render("Register");
+  res.render("register");
 });
 
 app.post("/register", checkInput, async (req, res) => {
