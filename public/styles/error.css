@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 20vh;
+  left: 30vw;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  height: 60vh;
+  width: 40vw;
+  background-color: #ffffff;
+}
+.container h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}

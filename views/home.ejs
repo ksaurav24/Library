@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/main.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <h1>Home</h1>
+        <div class="navRight">
+            <h2>Welcome, <%= user.name %>
+            </h2>
+            <button onclick="signOut()">Sign Out</button>
+        </div>
+    </div>
+    <div class="container">
+        <% if (books) { %>
+
+
+            <% books.forEach(element=> { %>
+                <div class="card">
+                    <h2>
+                        <%= element.Title %>
+                    </h2>
+                    <div class="childCard">
+                        <p>
+                            Author: <%= element.Author %>
+                        </p>
+                        <p>
+                            Number of pages:<%= element.No_pages %>
+                        </p>
+                    </div>
+                </div>
+                <% }) %>
+                    <% } %>
+    </div>
+
+
+
+</body>
+
+</html>

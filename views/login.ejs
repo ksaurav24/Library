@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In || Library</title>
+    <link rel="stylesheet" href="styles/forms.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Log In</h1>
+        <form action="/login" method="POST">
+            <label class="labeltxt" for="username">Email</label>
+            <input type="email" name="username" id="username" required>
+            <label class="labeltxt" for="password">Password</label>
+            <input id="password" type="password" name="password" id="password" required>
+            <p style="color: red;" id="passwordWarning" class="warningRed">Password must be atleast 8 characters
+                long&ast;
+
+            </p>
+            <button id="submitBtn" disabled type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Create an account</a></p>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
