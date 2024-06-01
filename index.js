@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const { Auth } = require("two-step-auth");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const mongoose = require("mongoose");
@@ -69,7 +68,7 @@ async function checkUser(req, res, next) {
 app.set("view engine", "ejs");
 
 app.get("/login", (req, res) => {
-  res.render("Login");
+  res.render("login");
 });
 
 app.post("/login", checkInput, async (req, res) => {
