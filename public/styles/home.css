@@ -3,6 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+.githubBtnCon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  padding: 4px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.githubBtn {
+  width: 45px;
+  height: 45px;
+}
 
 body {
   font-family: "Poppins", sans-serif;
