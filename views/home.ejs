@@ -10,6 +10,7 @@
     <meta name="keywords"
         content="Library, Node.js, Express.js, MongoDB, Render, EJS, JWT, bcrypt, zod, localStorage, Library Project by Saurav, Saurav project, Login project">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/main.js"></script>
 </head>
 
@@ -22,12 +23,15 @@
                     </path>
                 </svg></i></a>
     </div>
-    <div class="nav">
+    <div class="nav" id="nav">
         <h1>Home</h1>
-        <div class="navRight">
+        <div id="navRight" class="navRight">
             <h2>Welcome, <%= user.name %>
             </h2>
-            <button onclick="signOut()">Sign Out</button>
+            <a><button onclick="signOut()">Sign Out</button></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i id="NavBtn" class="fa fa-bars"></i>
+            </a>
         </div>
     </div>
     <div class="container">
