@@ -73,7 +73,7 @@ app.get("/login", (req, res) => {
 
 app.post("/login", checkInput, async (req, res) => {
   const { username, password } = req.body;
-  const userExist = await User.findOne({ username: username });
+  const userExist = await User.findOne({ username: username.toLowerCase() });
   if (userExist) {
     const isPasswordMatch = await bcrypt.compare(password, userExist.password);
     if (isPasswordMatch) {
@@ -97,7 +97,7 @@ app.get("/register", (req, res) => {
 
 app.post("/register", checkInput, async (req, res) => {
   const { name, username, password } = req.body;
-  const userExist = await User.findOne({ username: username });
+  const userExist = await User.findOne({ username: username.toLowerCase() });
   if (userExist) {
     console.warn("User already exists");
     res.redirect("/login");
@@ -105,7 +105,7 @@ app.post("/register", checkInput, async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({
       name: name,
-      username: username,
+      username: username.toLowerCase(),
       password: hashedPassword,
     });
     user.save();
