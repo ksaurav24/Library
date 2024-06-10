@@ -28,8 +28,8 @@ This is a Library Management Web Application built with Node.js, Express.js, and
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/library-management-webapp.git
-    cd library-management-webapp
+    git clone https://github.com/ksaurav24/Library.git
+    cd Library
     ```
 
 2. **Install dependencies:**
@@ -42,13 +42,13 @@ This is a Library Management Web Application built with Node.js, Express.js, and
     Create a `.env` file in the root directory and add the following:
     ```plaintext
     PORT=3000
-    MONGODB_URI=your_mongodb_uri
+    MONGODB_URI=your_mongodb_url
     JWT_SECRET=your_jwt_secret
     ```
 
 4. **Start the application:**
     ```bash
-    npm start
+    node index.js
     ```
 
 ## Usage
